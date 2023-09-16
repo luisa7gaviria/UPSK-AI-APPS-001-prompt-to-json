@@ -16,7 +16,7 @@ describe("Valida el archivo JSON del flow", () => {
         .filter((node) => node.data.type === "ChatOpenAI")
         .every((node) => node.data.inputs.modelName === "gpt-3.5-turbo")
     ).toBe(true);
-  }); 
+  });
 
   test("Debe contener al menos 1 Prompt Template", async () => {
     expect(flow.nodes.some((node) => node.data.type === "PromptTemplate")).toBe(
